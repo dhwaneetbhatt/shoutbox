@@ -1,0 +1,16 @@
+{
+    "name": "Shoutbox",
+    "version": "0.0.1",
+    "engines": {
+        "node": ">=0.10"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/dhwaneetbhatt/shoutbox.git"
+    },
+    "dependencies": {
+        "express": "4.x",
+        "socket.io": "1.x",
+        "body-parser": "1.x"
+    }
+}
