@@ -10,7 +10,7 @@
   },
   "main": "build/app.js",
   "scripts": {
-    "lint": "eslint src/ --ignore-path .gitignore",
+    "lint": "eslint .",
     "start": "node ."
   },
   "dependencies": {
