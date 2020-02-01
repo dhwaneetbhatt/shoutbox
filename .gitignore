@@ -1,4 +1,8 @@
-# Node modules #
-########################
+# Node modules
 node_modules
-public/node_modules
+
+# IDE files
+.vscode
+
+# Build
+build

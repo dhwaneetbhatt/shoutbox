@@ -6,4 +6,4 @@ A twitter style message broadcasting tool. It uses nodejs with express and socke
 ### Setup
 1. Install nodejs and npm
 2. Clone repo and type `npm install .`
-3. Run `nodejs server.js` and open `localhost:3000`
+3. Run `npm start` and open `localhost:3000`
