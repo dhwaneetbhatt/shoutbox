@@ -11,7 +11,7 @@
   "main": "build/app.js",
   "scripts": {
     "lint": "eslint .",
-    "start": "node ."
+    "start": "node server.js"
   },
   "dependencies": {
     "body-parser": "^1.x",
