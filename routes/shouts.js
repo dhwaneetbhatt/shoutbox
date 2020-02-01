@@ -1,19 +1,21 @@
-var shouts = [],
-    server = require('../server').server,
-    io = require('socket.io')(server);
+const shouts = [];
+const socketio = require('socket.io');
+const { server } = require('../server');
 
-exports.getAll = function (req, res) {
-    res.send(shouts);
+const io = socketio(server);
+
+exports.getAll = (_req, res) => {
+  res.send(shouts);
 };
 
-io.on('connection', function(socket) {
-    socket.on('shout', function(data, res) {
-        if (data.name && data.text) {
-            shouts.push(data);
-            res('ok');
-            socket.broadcast.emit('update', data);
-        } else {
-            res('error');
-        }
-    });
+io.on('connection', (socket) => {
+  socket.on('shout', (data, res) => {
+    if (data.name && data.text) {
+      shouts.push(data);
+      res('ok');
+      socket.broadcast.emit('update', data);
+    } else {
+      res('error');
+    }
+  });
 });

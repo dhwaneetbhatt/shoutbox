@@ -1,16 +1,26 @@
 {
-    "name": "shoutbox",
-    "version": "0.0.1",
-    "engines": {
-        "node": "*"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/dhwaneetbhatt/shoutbox.git"
-    },
-    "dependencies": {
-        "express": "^4.x",
-        "socket.io": "^2.x",
-        "body-parser": "^1.x"
-    }
+  "name": "shoutbox",
+  "version": "0.0.2",
+  "engines": {
+    "node": ">10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dhwaneetbhatt/shoutbox.git"
+  },
+  "main": "server.js",
+  "scripts": {
+    "lint": "eslint .",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.x",
+    "express": "^4.x",
+    "socket.io": "^2.x"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.0"
+  }
 }
