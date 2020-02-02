@@ -24,3 +24,4 @@ exports.server = server;
 const shouts = require('./routes/shouts');
 
 app.get('/shouts', shouts.getAll);
+app.get('/healthcheck', (_req, res) => res.send('OK'));
