@@ -1,8 +1,9 @@
 {
   "name": "shoutbox",
   "version": "0.0.2",
+  "license": "MIT",
   "engines": {
-    "node": ">10"
+    "node": ">=10"
   },
   "repository": {
     "type": "git",
@@ -11,7 +12,8 @@
   "main": "server.js",
   "scripts": {
     "lint": "eslint .",
-    "start": "node server.js"
+    "client": "cd client && yarn start",
+    "server": "node server.js"
   },
   "dependencies": {
     "body-parser": "^1.x",
