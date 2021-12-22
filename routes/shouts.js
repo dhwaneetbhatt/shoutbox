@@ -1,8 +1,8 @@
-const shouts = [];
-const socketio = require('socket.io');
-const { server } = require('../server');
+const { Server } = require('socket.io');
+const { server: httpServer } = require('../server');
 
-const io = socketio(server);
+const io = new Server(httpServer);
+const shouts = [];
 
 exports.getAll = (_req, res) => {
   res.send(shouts);

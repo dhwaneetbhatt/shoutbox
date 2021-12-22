@@ -1,5 +1,6 @@
 (function () {
   const socket = io();
+
   const Shout = Backbone.Model.extend({
     initialize() {},
   });
@@ -37,10 +38,12 @@
       this.listenTo(shouts, 'add', this.addOne);
       this.listenTo(shouts, 'reset', this.addAll);
       socket.on('update', (shout) => {
-        self.addOne(new Shout({
-          name: shout.name,
-          text: shout.text,
-        }));
+        self.addOne(
+          new Shout({
+            name: shout.name,
+            text: shout.text,
+          })
+        );
       });
 
       shouts.fetch();
@@ -67,10 +70,12 @@
         shout = { name, text };
         socket.emit('shout', shout, (res) => {
           if (res === 'ok') {
-            self.addOne(new Shout({
-              name: shout.name,
-              text: shout.text,
-            }));
+            self.addOne(
+              new Shout({
+                name: shout.name,
+                text: shout.text,
+              })
+            );
           }
         });
       }
@@ -100,4 +105,4 @@
   });
 
   const App = new AppView();
-}());
+})();
